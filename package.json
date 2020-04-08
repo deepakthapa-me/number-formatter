@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "node_modules/.bin/mocha --reporter spec",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "author": "Deepak Thapa <dtsuper3@gmail.com> (https://deepakthapa.in/)",
   "license": "ISC",
@@ -13,6 +14,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "coveralls": "^3.0.11",
+    "istanbul": "^0.4.5",
     "mocha": "^7.1.1"
   }
 }
